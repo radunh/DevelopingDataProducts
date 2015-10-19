@@ -30,7 +30,7 @@ install_github('slidifyLibraries','ramnathv')
 library(slidify)
 
 ## set working directory
-setwd('~/OneDrive/Radu Craioveanu/School/Data Science at John Hopkins on Coursera/Developing Data Products/CrimeUSA')
+setwd('~/OneDrive/Radu Craioveanu/School/Data Science at John Hopkins on Coursera/Developing Data Products/CrimeUSA/CrimeUSASlidify')
 
 ## create the project 
 author("CrimeUSASlidify")
