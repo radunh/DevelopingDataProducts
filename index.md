@@ -32,6 +32,7 @@ https://radunh.shinyapps.io/CrimeUSAShiny
 6. Github project URL for CrimeUSA Shiny app
 https://github.com/radunh/DevelopingDataProducts/tree/master/CrimeUSA/CrimeUSAShiny
 7. Github project URL for CrimeUSA Slidify preso 
+https://radunh.github.io/DevelopingDataProjects/index.html
 
 --- .class #id 
 
