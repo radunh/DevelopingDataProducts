@@ -81,7 +81,7 @@
 <li>Github project URL for CrimeUSA Shiny app
 <a href="https://github.com/radunh/DevelopingDataProducts/tree/master/CrimeUSA/CrimeUSAShiny">https://github.com/radunh/DevelopingDataProducts/tree/master/CrimeUSA/CrimeUSAShiny</a></li>
 <li>Github project URL for CrimeUSA Slidify preso 
-<a href="https://radunh.github.io/DevelopingDataProjects/index.html">https://radunh.github.io/DevelopingDataProjects/index.html</a></li>
+<a href="http://radunh.github.io/DevelopingDataProducts">http://radunh.github.io/DevelopingDataProducts</a></li>
 </ol>
 
   </article>
@@ -93,7 +93,19 @@
     <h2>Interactive Chart - ShinyUI</h2>
   </hgroup>
   <article data-timings="">
-    
+    <p>#```{r, echo = F, opts.label=&#39;shiny&#39;, message=FALSE, eval=FALSE, cache=FALSE}
+require(rCharts)
+shinyUI(bootstrapPage(
+  div(class=&quot;row&quot;,
+      div(class=&quot;span4&quot;,
+          sliderInput(&quot;Decade&quot;,&quot;&quot;, min=1960, max=2000, value=1960,  format=&quot;###0&quot;,step=10,animate=animationOptions(loop=T, interval=2500)))),</p>
+
+<p>htmlOutput(&quot;decade&quot;),
+  img(src = &quot;legend.png&quot;, height = 40, width = 200),
+  showOutput(&quot;animatedChart&quot;,&quot;datamaps&quot;)
+  ))
+#```</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -103,7 +115,43 @@
     <h2>Interactive Chart - ShinyServer</h2>
   </hgroup>
   <article data-timings="">
-    
+    <p>#```{r, echo = F, opts.label=&#39;shiny&#39;, message=FALSE, eval=FALSE}</p>
+
+<h2>Load libraries</h2>
+
+<p>library(rCharts)
+library(shiny)
+library(plyr)</p>
+
+<h2>Set working directory</h2>
+
+<p>setwd(&#39;~/OneDrive/Radu Craioveanu/School/Data Science at John Hopkins on Coursera/Developing Data Products/CrimeUSA&#39;)
+load(&quot;crimeusa.rda&quot;)</p>
+
+<p>shinyServer(function(input, output) {
+  # decade output
+  output$decade=renderText({paste(&quot;From &quot;,input$Decade+1,&quot;to &quot;,input$Decade+10)})
+  # rCharts
+  animateMap &lt;- function (x, data, colors, map = &quot;usa&quot;, ...){
+    fml = lattice::latticeParseFormula(x, data = data)
+    data = transform(data, fillKey = fml$left)
+    d &lt;- Datamaps$new()
+    d$set(scope = map, fills = as.list(colors), 
+          data = dlply(data, fml$right.name), ...)
+    return(d)
+  }
+  output$animatedChart = renderChart({
+    animatedChart=animateMap(
+      CrimeRate~state,
+      data = crimeusa[crimeusa$Year==input$Decade,],
+      colors = c(&quot;&quot;,&quot;#4daf4a&quot;,&quot;#fc8d62&quot;,&quot;red&quot;)
+    )
+    animatedChart$addParams(dom = &#39;animatedChart&#39;) 
+    return(animatedChart)
+  })
+})
+#```</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>

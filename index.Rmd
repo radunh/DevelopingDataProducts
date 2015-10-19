@@ -32,13 +32,13 @@ https://radunh.shinyapps.io/CrimeUSAShiny
 6. Github project URL for CrimeUSA Shiny app
 https://github.com/radunh/DevelopingDataProducts/tree/master/CrimeUSA/CrimeUSAShiny
 7. Github project URL for CrimeUSA Slidify preso 
-https://radunh.github.io/DevelopingDataProjects/index.html
+http://radunh.github.io/DevelopingDataProducts
 
 --- .class #id 
 
 ## Interactive Chart - ShinyUI
 
-```{r, echo = F, opts.label='shiny', message=FALSE, eval=FALSE, cache=FALSE}
+#```{r, echo = F, opts.label='shiny', message=FALSE, eval=FALSE, cache=FALSE}
 require(rCharts)
 shinyUI(bootstrapPage(
   div(class="row",
@@ -49,13 +49,13 @@ shinyUI(bootstrapPage(
   img(src = "legend.png", height = 40, width = 200),
   showOutput("animatedChart","datamaps")
   ))
-```
+#```
 
 --- .class #id 
 
 ## Interactive Chart - ShinyServer
 
-```{r, echo = F, opts.label='shiny', message=FALSE, eval=FALSE}
+#```{r, echo = F, opts.label='shiny', message=FALSE, eval=FALSE}
 ## Load libraries
 library(rCharts)
 library(shiny)
@@ -87,7 +87,7 @@ shinyServer(function(input, output) {
     return(animatedChart)
   })
 })
-```
+#```
 
 --- .class #id 
 
