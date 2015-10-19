@@ -28,41 +28,14 @@ knit        : slidify::knit2slides
 3. There is a slider input that allows selection of a decade year
 4. The slider also has a run mode, set to 2.5 seconds per decade
 5. Shiny server app URL https://radunh.shinyapps.io/CrimeUSAShiny
-6. Github project URL for CrimeUSA Shiny app
-7. Github project URL for CrimeUSA Slidify preso
+6. Github project URL for CrimeUSA Shiny app https://github.com/radunh/DevelopingDataProducts/tree/master/CrimeUSA/CrimeUSAShiny
+7. Github project URL for CrimeUSA Slidify preso 
 
 --- .class #id 
 
 ## Interactive Chart - ShinyUI
 
-<!--html_preserve--><div class="row">
-<div class="span4">
-<div class="form-group shiny-input-container">
-<label class="control-label" for="Decade"></label>
-<input class="js-range-slider" id="Decade" data-min="1960" data-max="2000" data-from="1960" data-step="10" data-grid="true" data-grid-num="4" data-grid-snap="false" data-prettify-separator="," data-keyboard="true" data-keyboard-step="25" data-drag-interval="true" data-data-type="number"/>
-<div class="slider-animate-container">
-<a href="#" class="slider-animate-button" data-target-id="Decade" data-interval="2500" data-loop="TRUE">
-<span class="play">
-<i class="glyphicon glyphicon-play"></i>
-</span>
-<span class="pause">
-<i class="glyphicon glyphicon-pause"></i>
-</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div id="decade" class="shiny-html-output"></div>
-<img src="legend.png" height="40" width="200"/>
-<div id="animatedChart" class="shiny-html-output rChart datamaps">
-<!--SHINY.SINGLETON[3baccce32bc0f7826feb4e4cba99f2a4819ca0f3]-->
-<!--/SHINY.SINGLETON[3baccce32bc0f7826feb4e4cba99f2a4819ca0f3]-->
-<!--SHINY.SINGLETON[0a8a856702a58193a40b8a9d55e6be858f811bd3]-->
-<!--/SHINY.SINGLETON[0a8a856702a58193a40b8a9d55e6be858f811bd3]-->
-<!--SHINY.SINGLETON[5e0cfe96c53e8027c77948ee45e73c35ad9173f3]-->
-<!--/SHINY.SINGLETON[5e0cfe96c53e8027c77948ee45e73c35ad9173f3]-->
-</div><!--/html_preserve-->
+
 
 --- .class #id 
 
