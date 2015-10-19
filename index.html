@@ -75,7 +75,7 @@
 <li>Provides crime data in the USA from 1960 to 2000</li>
 <li>The crime data is categorized as Low, Medium and High</li>
 <li>There is a slider input that allows selection of a decade year</li>
-<li>The slider also has a run mode, set to 2.5 seconds per decade</li>
+<li>The slider also has a run mode, set to .5 seconds per decade</li>
 <li>Shiny server app URL for CrimeUSA 
 <a href="https://radunh.shinyapps.io/CrimeUSAShiny">https://radunh.shinyapps.io/CrimeUSAShiny</a></li>
 <li>Github project URL for CrimeUSA Shiny app
@@ -98,7 +98,7 @@ require(rCharts)
 shinyUI(bootstrapPage(
   div(class=&quot;row&quot;,
       div(class=&quot;span4&quot;,
-          sliderInput(&quot;Decade&quot;,&quot;&quot;, min=1960, max=2000, value=1960,  format=&quot;###0&quot;,step=10,animate=animationOptions(loop=T, interval=2500)))),</p>
+          sliderInput(&quot;Decade&quot;,&quot;&quot;, min=1960, max=2000, value=1960,  format=&quot;###0&quot;,step=10,animate=animationOptions(loop=T, interval=500)))),</p>
 
 <p>htmlOutput(&quot;decade&quot;),
   img(src = &quot;legend.png&quot;, height = 40, width = 200),

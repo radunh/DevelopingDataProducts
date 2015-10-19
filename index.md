@@ -26,7 +26,7 @@ knit        : slidify::knit2slides
 1. Provides crime data in the USA from 1960 to 2000
 2. The crime data is categorized as Low, Medium and High
 3. There is a slider input that allows selection of a decade year
-4. The slider also has a run mode, set to 2.5 seconds per decade
+4. The slider also has a run mode, set to .5 seconds per decade
 5. Shiny server app URL for CrimeUSA 
 https://radunh.shinyapps.io/CrimeUSAShiny
 6. Github project URL for CrimeUSA Shiny app
@@ -43,7 +43,7 @@ require(rCharts)
 shinyUI(bootstrapPage(
   div(class="row",
       div(class="span4",
-          sliderInput("Decade","", min=1960, max=2000, value=1960,  format="###0",step=10,animate=animationOptions(loop=T, interval=2500)))),
+          sliderInput("Decade","", min=1960, max=2000, value=1960,  format="###0",step=10,animate=animationOptions(loop=T, interval=500)))),
 
   htmlOutput("decade"),
   img(src = "legend.png", height = 40, width = 200),
