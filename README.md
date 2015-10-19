@@ -6,7 +6,6 @@
 3. Document the work via a Slidify presentation
 4. Push all the work to a Github repo
 
---- .class #id 
 
 ## The Application
 
