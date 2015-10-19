@@ -27,8 +27,10 @@ knit        : slidify::knit2slides
 2. The crime data is categorized as Low, Medium and High
 3. There is a slider input that allows selection of a decade year
 4. The slider also has a run mode, set to 2.5 seconds per decade
-5. Shiny server app URL https://radunh.shinyapps.io/CrimeUSAShiny
-6. Github project URL for CrimeUSA Shiny app https://github.com/radunh/DevelopingDataProducts/tree/master/CrimeUSA/CrimeUSAShiny
+5. Shiny server app URL for CrimeUSA 
+https://radunh.shinyapps.io/CrimeUSAShiny
+6. Github project URL for CrimeUSA Shiny app
+https://github.com/radunh/DevelopingDataProducts/tree/master/CrimeUSA/CrimeUSAShiny
 7. Github project URL for CrimeUSA Slidify preso 
 
 --- .class #id 
@@ -124,8 +126,6 @@ slidify("index.Rmd") ## or runDeck("index.Rmd")
 browseURL("index.html")
 ```
 
---- .class #id 
 
-## Slide 4
 
 
