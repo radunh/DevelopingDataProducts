@@ -1,0 +1,8 @@
+name: CrimeUSAShiny
+account: radunh
+server: shinyapps.io
+bundleId: 291022
+url: https://radunh.shinyapps.io/CrimeUSAShiny
+when: 1445214669.31705
+asMultiple: FALSE
+asStatic: FALSE

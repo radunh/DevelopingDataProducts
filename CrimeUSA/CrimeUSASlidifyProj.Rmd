@@ -1,0 +1,45 @@
+---
+title: "Shiny and Slidify for Developing Data Products"
+author: "Radu Craioveanu"
+date: "October 18, 2015"
+output: html_document
+---
+
+#Prepare for Shiny
+
+```{r, eval=FALSE}
+install.packages("shiny")
+libray(shiny)
+```
+1. Create a Shiny UI and Server file
+2. runApp() in the same directory as the ui.r and server.r
+3. Publish to Shiny from RStudio once you run the app
+
+#Prepare Environment for Slidify
+
+```{r, eval=FALSE}
+## install packages
+install.packages("devtools")
+library(devtools)
+
+## install slidify
+install_github('slidify','ramnathv')
+install_github('slidifyLibraries','ramnathv')
+
+## load Slidify
+library(slidify)
+
+## set working directory
+setwd('~/OneDrive/Radu Craioveanu/School/Data Science at John Hopkins on Coursera/Developing Data Products/CrimeUSA')
+
+## create the project 
+author("CrimeUSASlidify")
+
+## edit index.html created in the working directory ./CrimeUSASlidify
+
+## create the slidify presentation
+slidify("index.Rmd") ## or runDeck("index.Rmd")
+
+## browse the preso with your browser
+browseURL("index.html")
+```

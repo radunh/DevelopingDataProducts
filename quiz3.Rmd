@@ -1,0 +1,111 @@
+---
+title: "Developing Data Products - Quiz 3"
+author: "radu craioveanu"
+date: "Oct 10, 2015"
+output: html_document
+---
+
+```{r, echo=FALSE,include=FALSE}
+setwd("~/OneDrive/Radu Craioveanu/School/Data Science at John Hopkins on Coursera/Developing Data Products")
+```
+
+```{r Setup the Options for knitr behavior for code chunks,include=FALSE}
+require(knitr)
+knitr::opts_chunk$set(echo=TRUE,fig.path = './figure/')
+```
+
+#Question 1
+
+Which of the following items is required for an R package to pass R CMD check without any warnings or errors?
+
+example data sets
+
+a demo directory
+
+vignette
+
+##Answer
+DESCRIPTION file
+
+#Question 2
+
+Which of the following is a generic function in a fresh installation of R, with only the default packages loaded?
+
+##Answer
+show
+
+dgamma
+
+lm
+
+colSums
+
+#Question 3
+
+What function is used to obtain the function body for an S4 method function?
+
+showMethods()
+
+getS3method()
+
+getClass()
+
+##Answer
+getMethod()
+
+#Question 4
+
+Which one of the following functions must be defined in order to deploy an R function on yhat?
+
+##Answer
+model.predict
+
+model.require
+
+model.transform
+
+model.load
+
+#Question 5
+
+Please download the R package DDPQuiz3 from the course web site. Examine the createmean function implemented in the R/ sub-directory. What is the appropriate text to place above the createmean function for Roxygen2 to create a complete help file?
+
+```{r}
+#' This function calculates the mean
+#' 
+#' @param x is a numeric vector
+#' @return the mean of x
+#' @export
+#' @examples 
+#' x <- 1:10
+#' createmean(y)
+```
+```{r}
+#' This function calculates the mean
+#' 
+#' @return the mean of x
+#' @export
+#' @examples 
+#' x <- 1:10
+#' createmean(x)
+```
+```{r}
+#' This function calculates the mean
+#' 
+#' @param x is a numeric vector
+#' @export
+#' @examples 
+#' x <- 1:10
+#' createmean(x)
+```
+##Answer
+```{r}
+#' This function calculates the mean
+#' 
+#' @param x is a numeric vector
+#' @return the mean of x
+#' @export
+#' @examples 
+#' x <- 1:10
+#' createmean(x)
+```
