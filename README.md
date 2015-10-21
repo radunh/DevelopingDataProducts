@@ -19,5 +19,4 @@ https://radunh.shinyapps.io/CrimeUSAShiny
 https://github.com/radunh/DevelopingDataProducts/tree/master/CrimeUSA/CrimeUSAShiny
 7. Github project URL for CrimeUSA Slidify preso 
 http://radunh.github.io/DevelopingDataProducts
-8. The presentation index.Rpres and index.html with embedded R code can be found on the gh-branch repo at
-9. https://github.com/radunh/DevelopingDataProducts/tree/gh-pages
+8. The presentation index.Rpres and index.html with embedded R code can be found on the gh-branch repo at https://github.com/radunh/DevelopingDataProducts/tree/gh-pages
