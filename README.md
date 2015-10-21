@@ -3,7 +3,7 @@
 
 1. Provide a longitudinal animated view of the crime rate in USA
 2. Showcase the work as a Shiny App and load on the RStudio Shiny server 
-3. Document the work via a Slidify presentation
+3. Document the work via a RStudio Presenter presentation
 4. Push all the work to a Github repo
 
 
@@ -19,3 +19,5 @@ https://radunh.shinyapps.io/CrimeUSAShiny
 https://github.com/radunh/DevelopingDataProducts/tree/master/CrimeUSA/CrimeUSAShiny
 7. Github project URL for CrimeUSA Slidify preso 
 http://radunh.github.io/DevelopingDataProducts
+8. The presentation index.Rpres and index.html with embedded R code can be found on the gh-branch repo at
+9. https://github.com/radunh/DevelopingDataProducts/tree/gh-pages
