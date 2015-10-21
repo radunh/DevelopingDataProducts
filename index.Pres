@@ -1,0 +1,40 @@
+Crime in the USA
+A Tool for Crime Fighters
+========================================================
+author: Radu Craioveanu 
+date: 20 October 2015
+
+Welcome to the Super Hero Tool 
+========================================================
+
+- Provides crime data in the USA from 1960 to 2010
+- Predicts crime levels in the country till year 2050 (future release)
+- Categorize the crime thresholds per your Super Here needs (future release)
+- Visualize through animation how other Super Heroes in the past were able to improve the crime rate
+
+Basic info the tool will make available
+========================================================
+
+```{r, echo=FALSE, results = 'asis', comment = NA}
+library(rMaps)
+data("violent_crime")
+
+ichoropleth(Crime ~ State, data = subset(violent_crime, Year == 2010))
+```
+
+Animation capabilities
+========================================================
+
+```{r, echo=FALSE, results = 'asis', comment = NA}
+library(rMaps)
+data("violent_crime")
+
+ichoropleth(Crime ~ State, data = violent_crime, animate = "Year")
+```
+
+Next Steps
+========================================================
+
+- Get the app here https://goo.gl/tnvpnr
+- Contribute to the project here https://goo.gl/23iNSr
+- Review this Slidify preso here http://goo.gl/SeIzws
